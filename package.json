@@ -1,0 +1,27 @@
+{
+  "name": "uptask",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angel-ag2/UpTask.git"
+  },
+  "bugs": {
+    "url": "https://github.com/angel-ag2/UpTask/issues"
+  },
+  "homepage": "https://github.com/angel-ag2/UpTask#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.2",
+    "save": "^2.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
