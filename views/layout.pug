@@ -6,6 +6,7 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="/css/normalize.css")
         link(rel="stylesheet", href="/css/app.css")
+        link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.7.2/css/all.css', integrity='sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr', crossorigin='anonymous')
         title #{nombrePagina}
     body 
         header.barra     
@@ -13,6 +14,7 @@ html(lang="en")
             a(href="#") Cerrar sesión
 
         <!- con .  es clases-->
+        a(href="/get-data") LOAD DATA
         main.contenedor     
             <!-- con # es una ID -->
             aside.contenedor-proyectos    
@@ -22,12 +24,17 @@ html(lang="en")
                         span +
                 .panel.lista-proyectos
                     h2 Proyectos
-                    ul#proyectos.proyectos  
-                        li
-                            a(href="#") Diseño de tienda virtual
-                        li
-                            a(href="#") Diseño de nuevo blog
-                        li
-                            a(href="#") Diseño de tienda virtual                            
+                    ul#proyectos.proyectos                                 
+                        if (proyectos2.length)
+                            each proyecto in proyectos2
+                                li  
+                                    a(href=`/proyectos/${proyecto.url}`)= proyecto.nombre
 
             block contenido
+
+            //- pre= vardump(proyectos2)
+
+        script(src="/dist/bundle.js")
+        
+        
+        
